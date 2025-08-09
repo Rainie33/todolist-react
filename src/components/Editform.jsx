@@ -56,7 +56,10 @@ function Item({ item, onDeleteItem, onToggleItem, onEditItem }) {
           {item.description}
         </span>
       )}
-      <span className="edit-icon" onClick={toggleEditMode}>
+      <span
+        className="edit-icon"
+        onClick={isEditing ? handleEditSubmit : toggleEditMode}
+      >
         <FaRegPenToSquare />
       </span>
       <span className="delete-icon" onClick={() => onDeleteItem(item.id)}>

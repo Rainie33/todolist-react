@@ -26,7 +26,14 @@ function TodoWrapper() {
 
   // 處理刪除項目
   function handleDeleteItem(id) {
-    setItems((items) => items.filter((item) => item.id !== id));
+    // 1. 從 items 中移除指定的項目
+    const updatedItems = items.filter((item) => item.id !== id);
+
+    // 2. 更新狀態（React state）
+    setItems(updatedItems);
+
+    // 3. 同步更新 localStorage
+    localStorage.setItem('items', JSON.stringify(updatedItems));
   }
 
   // 處理切換項目狀態
