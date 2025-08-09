@@ -33,6 +33,8 @@
 
 ```bash
 npm install
+npm install react-icons
+npm list react-icons
 ```
 
 ### 啟動開發環境
