@@ -31,7 +31,6 @@ body {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: -3px;
   padding-top: 6.8rem;
 }
 
@@ -40,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.3rem;
+  gap: 1rem;
 }
 
 .enter {
@@ -48,10 +47,15 @@ body {
   font-size: 2rem;
   color: #fff;
   background-color: hsla(240, 15%, 9%, 1);
+  padding-left: 20px;
 
   height: 5rem;
   width: 40rem;
   border-radius: 30px;
+
+  border: #333 solid 0.1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0px -4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .add-button {
@@ -72,6 +76,16 @@ body {
 
 .add-button:active {
   background-color: rgba(112, 36, 167, 0.5);
+}
+
+form {
+  width: 100%;
+}
+
+form > input {
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  padding-left: 0.6rem;
 }
 
 .list {
@@ -96,8 +110,6 @@ body {
 
   border-radius: 1rem;
   box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
-
-  /* border: 0.3rem solid; */
 }
 
 ul {
@@ -120,8 +132,9 @@ li {
   margin-right: 2rem;
   padding: 1rem;
 
-  border-radius: 50%;
+  /* 方框 */
   appearance: none;
+  border-radius: 50%;
   background: #fff;
   cursor: pointer;
   position: relative;
@@ -142,7 +155,6 @@ li {
 
 .Update {
   background-color: hsla(240, 15%, 9%, 1);
-
   font-size: 2rem;
   color: #fff;
 }
@@ -150,16 +162,5 @@ li {
 svg {
   margin-right: 5px;
   margin-left: 5px;
-
-  fill: #ffffff;
-}
-
-form {
-  width: 100%;
-}
-
-form > input {
-  width: 100%;
-  font-family: 'Playfair Display', serif;
-  padding-left: 0.6rem;
+  fill: #fff;
 }
