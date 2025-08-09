@@ -27,13 +27,13 @@ function CreateForm({ onAddItems }) {
       <input
         className="enter"
         type="text"
-        placeholder="  Add a new tasks...📝"
+        placeholder="  Add a new tasks..."
         // 2. 雙向綁定
         value={description}
         // 3. Hook 抓取 input 的值顯示於畫面
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button className="add-button">+</button>
+      <button className="add-button">ADD</button>
     </form>
   );
 }

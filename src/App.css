@@ -13,9 +13,9 @@ html {
 body {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
-  font-size: 2.4rem;
-  color: #7c0404;
-  background-color: #fdf1e8;
+  font-size: 2rem;
+  color: #fff;
+  background-color: hsla(240, 15%, 9%, 1);
 }
 
 /* layout */
@@ -27,7 +27,7 @@ body {
 }
 
 .title {
-  font-size: 8rem;
+  font-size: 6rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -45,23 +45,33 @@ body {
 
 .enter {
   font-weight: 500;
-  font-size: 2.4rem;
-  color: #7c0404;
+  font-size: 2rem;
+  color: #fff;
+  background-color: hsla(240, 15%, 9%, 1);
 
   height: 5rem;
-  width: 30rem;
-  border-radius: 10px;
+  width: 40rem;
+  border-radius: 30px;
 }
 
 .add-button {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #fdf8e8;
-  background-color: #7c0404;
+  background-color: rgba(112, 36, 167, 0.896);
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
+
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: rgba(112, 36, 167, 0.7);
+}
+
+.add-button:active {
+  background-color: rgba(112, 36, 167, 0.5);
 }
 
 .list {
@@ -70,11 +80,24 @@ body {
 
   margin: 0 auto 10rem auto;
   padding: 2rem;
-  border: 0.3rem solid;
-  box-shadow: 6px 6px 6px #33333371;
-
   width: 50rem;
-  border-radius: 20px;
+
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+
+  border-radius: 1rem;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+
+  /* border: 0.3rem solid; */
 }
 
 ul {
@@ -86,17 +109,26 @@ li {
   display: flex;
   align-items: center;
   padding: 10px;
-  border-bottom: 2px solid #7c0404;
-
   word-break: break-all;
 }
 
 /* ************************** */
 
 .check-box {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-right: 2rem;
+  padding: 1rem;
+
+  border-radius: 50%;
+  appearance: none;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.check-box:checked {
+  background: #000;
 }
 
 .text {
@@ -109,6 +141,25 @@ li {
 }
 
 .Update {
-  font-size: 2.6rem;
-  color: #7c0404;
+  background-color: hsla(240, 15%, 9%, 1);
+
+  font-size: 2rem;
+  color: #fff;
+}
+
+svg {
+  margin-right: 5px;
+  margin-left: 5px;
+
+  fill: #ffffff;
+}
+
+form {
+  width: 100%;
+}
+
+form > input {
+  width: 100%;
+  font-family: 'Playfair Display', serif;
+  padding-left: 0.6rem;
 }

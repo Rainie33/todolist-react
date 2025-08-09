@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FaRegPenToSquare } from 'react-icons/fa6';
+import { RiDeleteBin5Line } from 'react-icons/ri';
 
 function Item({ item, onDeleteItem, onToggleItem, onEditItem }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -55,10 +57,10 @@ function Item({ item, onDeleteItem, onToggleItem, onEditItem }) {
         </span>
       )}
       <span className="edit-icon" onClick={toggleEditMode}>
-        ✏️
+        <FaRegPenToSquare />
       </span>
       <span className="delete-icon" onClick={() => onDeleteItem(item.id)}>
-        🗑️
+        <RiDeleteBin5Line />
       </span>
     </li>
   );
